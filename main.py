@@ -3,12 +3,18 @@
 import addition
 import subtraction
 import division
+import multiply
+
 
 def run(arg, num1, num2):
 
 	addObject = addition.Addition(num1, num2)
 	subObject = subtraction.Subtraction(num1, num2)
+
 	divideObject = division.Division(num1,num2)
+
+	multObject = multiply.Multiplication(num1, num2)
+
 
 	result = 0
 
@@ -20,7 +26,11 @@ def run(arg, num1, num2):
 
 	elif arg == "sub":
 		result = subObject.subtract()
-		resultPrinted = "The added numbers are: " + str(result)
+		resultPrinted = "The subtracted numbers are: " + str(result)
+
+	elif arg == "mult":
+		result = multObject.multiply()
+		resultPrinted = "The multiplied numbers are: " + str(result)
 
 	elif arg == "divide":
 		result = divideObject.divide()
@@ -32,7 +42,7 @@ def run(arg, num1, num2):
 
 num1 = int(input("Enter first number: "))
 num2 = int(input("Enter second number: "))
-arg = str(input("What do you wanna do? (add, sub): "))
+arg = str(input("What do you wanna do? (add, sub, mult, divide): "))
 
 print(run(arg, num1, num2))
 
