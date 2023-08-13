@@ -7,6 +7,7 @@ import multiply
 import minmax
 import modulo
 import square
+import average
 
 def run(arg, num1, num2):
 
@@ -17,6 +18,7 @@ def run(arg, num1, num2):
 	minmaxObject = minmax.Minmax(num1, num2)
 	moduloObject = modulo.Modulo(num1, num2)
 	squareObject = square.Square(num1, num2)
+	avgObject = average.Average(num1, num2)
 
 
 	result = 0
@@ -52,6 +54,10 @@ def run(arg, num1, num2):
 		result = squareObject.square()
 		resultPrinted = "Num1 squared num2 is: " + str(result)
 
+	elif arg == "average":
+		result = avgObject.average()
+		resultPrinted = "The average is: " + str(result)
+
 
 
 	return resultPrinted
@@ -60,7 +66,7 @@ def run(arg, num1, num2):
 
 num1 = int(input("Enter first number: "))
 num2 = int(input("Enter second number: "))
-arg = str(input("What do you wanna do? (add, sub, mult, divide, modulo, minmax): "))
+arg = str(input("What do you wanna do? (add, sub, mult, divide, modulo, minmax, square, average): "))
 
 print(run(arg, num1, num2))
 
