@@ -6,5 +6,5 @@ class Modulo:
         self.num2 = num2
 
     def modulo(self):
-        return num1 % num2
+        return self.num1 % self.num2
         
