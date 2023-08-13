@@ -2,11 +2,13 @@
 
 import addition
 import subtraction
+import division
 
 def run(arg, num1, num2):
 
 	addObject = addition.Addition(num1, num2)
 	subObject = subtraction.Subtraction(num1, num2)
+	divideObject = division.Division(num1,num2)
 
 	result = 0
 
@@ -19,6 +21,10 @@ def run(arg, num1, num2):
 	elif arg == "sub":
 		result = subObject.subtract()
 		resultPrinted = "The added numbers are: " + str(result)
+
+	elif arg == "divide":
+		result = divideObject.divide()
+		resultPrinted = "The division of numbers is: " + str(result)
 
 	return resultPrinted
 
