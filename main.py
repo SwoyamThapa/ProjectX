@@ -6,6 +6,7 @@ import division
 import multiply
 import minmax
 import modulo
+import square
 
 def run(arg, num1, num2):
 
@@ -15,6 +16,7 @@ def run(arg, num1, num2):
 	multObject = multiply.Multiplication(num1, num2)
 	minmaxObject = minmax.Minmax(num1, num2)
 	moduloObject = modulo.Modulo(num1, num2)
+	squareObject = square.Square(num1, num2)
 
 
 	result = 0
@@ -45,6 +47,11 @@ def run(arg, num1, num2):
 		minimum = minmaxObject.min()
 		maximum = minmaxObject.max()
 		resultPrinted = "The min number is: " + str(minimum) + " and the max number is: " + str(maximum)
+
+	elif arg == "square":
+		result = squareObject.square()
+		resultPrinted = "Num1 squared num2 is: " + str(result)
+
 
 
 	return resultPrinted
